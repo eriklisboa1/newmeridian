@@ -30,6 +30,8 @@ for (const link of links) {
   link.addEventListener('click', () => nav.classList.remove('show'));
 }
 
+
+
 /* Testimonials - SwiperJS */
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,

@@ -11,16 +11,16 @@
   
   /*Verde forte
   /* Colors */
-  --hue: 160;
+  --hue: 159.6;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 40%, 15%);
+  --base-color: hsl(var(--hue) 5400%, 15%);
   --base-color-second: hsl(var(--hue) 30% 25%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
-  --title-color: hsl(49, 81%, 76%);  
+  --title-color: hsl(44, 100%, 62%);  
   --text-color: hsl(0, 0%, 26%);
-  --text-color-light: hsl(0 0% 98%);
-  --body-color: hsl(0 0% 98%);
+  --text-color-light: hsl(0, 0%, 93%);
+  --body-color: hsl(0, 0%, 0%);
 
   /*Fontes Amarelas
   /* Colors */
@@ -312,6 +312,16 @@ nav.show div.icon-close {
   position: relative;
   right: 2.93rem;
 }
+.video-container {
+  width: 130%; /* Define a largura */
+  max-width: 500%; /* Define um limite máximo */
+}
+
+.video-container video {
+  width: 100%; /* Faz o vídeo ocupar toda a largura do container */
+  height: auto; /* Mantém a proporção original */
+  border-radius: 20px; /* (Opcional) Adiciona cantos arredondados */
+}
 
 #home .image img,
 #home .image::before {
@@ -370,6 +380,44 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  
+}
+
+.mission-vision-values {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.mission-vision-values .grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Centraliza os elementos na horizontal */
+  flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+}
+
+.carde {
+  background-color: #0F241D;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  flex: 50; /* Permite que os cards se ajustem ao espaço disponível */
+  max-width: 320px; /* Define um tamanho máximo */
+}
+
+.carde .icon {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+  color: #0ef;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /*==================== SERVICES ====================*/
@@ -476,6 +524,31 @@ nav.show div.icon-close {
 }
 
 /*==================== CONTACT ====================*/
+#contact {
+  background-image: url(); /* Substitua pela URL da sua imagem */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
+}
+#contact .container {
+  position: relative;
+  z-index: 2; /* Mantém o texto acima do fundo */
+  display: flex; /* Adiciona flexbox para alinhar o mapa e o texto lado a lado */
+  flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+}
+
+.credit {
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 1.3em;
+  color: whitesmoke;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.credit a {
+  color: whitesmoke;
+}
+
 #contact span {
   color: var(--base-color);
 }
@@ -504,7 +577,7 @@ nav.show div.icon-close {
 }
 
 #contact ul li i {
-  color: var(--base-color)
+  color: var(--base-color);
 }
 
 #contact ul.grid {
@@ -512,10 +585,9 @@ nav.show div.icon-close {
 }
 
 /*==================== FOOTER ====================*/
-/*==================== FOOTER ====================*/
 /* Estilização do Footer */
 footer {
-  background: #0F241D; /* Cor escura como no exemplo */
+  background-color: #0F241D;
   padding: 3rem 0;
   color: #f7e791; /* Cor do texto em amarelo suave */
   text-align: center;
@@ -552,7 +624,6 @@ footer .brand p {
   height: 300px;
   border: 0;
 }
-
 
 /* Redes Sociais */
 footer .social {
@@ -705,22 +776,47 @@ footer .social a:hover {
     grid-auto-flow: column;
   }
 
-  /* Services */
-  .cards {
-    grid-template-columns:  1fr 1fr ;
-  }
+  /* Services */.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Sempre 2 colunas */
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
 
-  .card {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
+.card {
+    background-color: #0F241D;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-height: 200px; /* Mantém o tamanho uniforme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
 
-  .card img {
-    width: 100%;
-    height: 70%;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-  }
+.card i {
+    font-size: 40px; /* Ícones do mesmo tamanho */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito ao passar o mouse */
+}
+
+/* Responsivo: muda para 1 coluna no celular */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr); /* Uma coluna */
+    }
+}
 
   /* Testimonials */
   #testimonials .container {
@@ -772,10 +868,10 @@ footer .social a:hover {
 
 /* large devices: 1023> */
 /* large devices: 992> */
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
   }
 }
+
 /* medium devices: 767> */
