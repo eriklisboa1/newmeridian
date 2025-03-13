@@ -482,6 +482,7 @@ nav.show div.icon-close {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.5rem;
+  padding: 0 0 0 1;
 }
 
 #testimonials blockquote p {
@@ -526,10 +527,12 @@ nav.show div.icon-close {
 /*==================== CONTACT ====================*/
 #contact {
   background-image: url(); /* Substitua pela URL da sua imagem */
+  
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center center;
 }
+
 #contact .container {
   position: relative;
   z-index: 2; /* Mantém o texto acima do fundo */
@@ -557,6 +560,21 @@ nav.show div.icon-close {
   gap: 4rem;
 }
 
+.text1 {
+  background: rgba(15, 36, 29, 0.75);
+  padding: 8px; /* Espaçamento interno */
+  border-radius: 10px; /* Cantos arredondados */
+  display: inline-block; /* Para o fundo ajustar ao tamanho do conteúdo */
+}
+#contact .text1 p {
+  margin-bottom: 2rem;
+}
+
+#contact .text1 p {
+  margin-bottom: 2rem;
+}
+
+
 #contact .text p {
   margin-bottom: 2rem;
 }
@@ -582,6 +600,12 @@ nav.show div.icon-close {
 
 #contact ul.grid {
   gap: 2rem;
+}
+#contact h2, 
+#contact p, 
+#contact ul li {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white; /* Garante um bom contraste */
 }
 
 /*==================== FOOTER ====================*/
@@ -703,7 +727,9 @@ footer .social a:hover {
   }
 
   .section {
-    padding: 10rem 0;
+    padding-top: 0;
+    margin-top: 0;
+   
   }
   
   .section header, #testimonials header {

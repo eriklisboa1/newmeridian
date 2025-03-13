@@ -16,6 +16,7 @@
 
   <!-------------------- STYLES -------------------->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="carrosel.css">
 
 
   <!-------------------- FONTS -------------------->
@@ -44,25 +45,22 @@
   <style>
 
 .statt {
-      background-color: #f7e791;
-      border-radius: 30px;
-      width: 60%;
-      padding: 5%;
-      text-align: center;
-      
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .icon {
-      font-size: 2rem;
-    }
-    h3 {
-      margin: 2px 0;
-    }
-    p {
-      margin: 3px 0;
-    }
+    background-color: #f7e791;
+    border-radius: 30px;
+    width: 169%; /* Faz cada item ocupar a largura total */
+    max-width: 400px; /* Define um limite para não ficar exageradamente grande */
+    padding: 2%;
+    text-align: center;
+    gap: 5%;
+    
+    
+    
+   
+    
+    align-items: center;
+}
+
+
   </style>
 
 
@@ -87,20 +85,91 @@
       <div class="toggle icon-close"></div>
     </nav>
   </header>
-
   <main>
-    <!-------------------- HOME -------------------->
+    
+<section class="section" id="home" style="background-color: #0F241D;padding-bottom: 1rem;" >
+  <section class="section" id="testimonials" style="background-color: #0F241D; margin-right: 20px;padding: 5 10px; padding-top: 2%;padding-bottom: 4rem;">
+    <div class="container" style="display: flex; align-items: center; gap: 40px; padding: 0 60px;">
+    
+      <div class="text" style="flex: 2; color: white; padding-left: 60px;">
+        <h2 class="title" style="color: #f1cc62;">Regularização de Imóveis: Rurais e Urbanos</h2>
+        <p>
+            Garantimos a segurança jurídica e a conformidade legal de propriedades rurais e urbanas por meio de processos técnicos especializados, 
+            incluindo georreferenciamento, certificação e registro. Nossa equipe utiliza tecnologia de ponta para auxiliar 
+            proprietários e empresas na obtenção da documentação necessária, assegurando o pleno uso e a valorização do imóvel.
+        </p>
+        <p>
+            Com anos de experiência no ramo de Regularização Imobiliária, desenvolvemos uma filosofia de trabalho diferenciada, nossa atuação abrange desde a 
+            análise técnica e legal de imóveis ou terrenos até́ a emissão de matrículas e assessoria em diligências previas, 
+            garantindo soluções eficazes e seguras para nossos clientes em todo o Brasil.
+        </p>
+        <div class="contatoZAP">
+            <a class="button" target="_blank" href="https://wa.me/+5598999830456" style="background-color: #f1cc62; color: #0F241D; padding: 20px 10px; text-decoration: none; border-radius: 5px;">
+                Faça seu orçamento
+            </a>
+        </div>
+    </div>
+    
+      <div class="testimonials swiper" style="flex: 1; margin-right: 60px;">
+        <div class="swiper-wrapper" style="display: flex; gap: 30px; box-shadow: 0px 0px 12pxrgba(195, 248, 2, 0.08);">
+
+          <div class="testimonial swiper-slide"  >
+          <img  style="width: 150%; border-radius: 30px; "src="imgescura.jpg" alt="">
+          </div>
+
+          <div style="width: 10%; padding-right: 5%;">
+              
+          </div>
+
+          <div class="testimonial swiper-slide">
+            <img  style="width: 150%;border-radius: 30px;"src="imgescura.jpg" alt="">
+          </div>
+          <div style="width: 10%;border-radius: 30px; padding-right: 5%;">
+              
+          </div>
+          
+          
+          <div class="testimonial swiper-slide">
+            <img  style="width: 150%;border-radius: 30px;"src="imgescura.jpg" alt="">
+          </div>
+          <div style="width: 10%; padding-right: 5%;">
+    
+          </div>
+          <div class="testimonial swiper-slide">
+            <img  style="width: 150%;border-radius: 30px;"src="imgescura.jpg" alt="">
+          </div>
+
+          <div class="testimonial swiper-slide">
+          
+          </div>
+          <div class="testimonial swiper-slide">
+          
+          </div>
+          <!-- COLOCAR 2 DIV TESTIOMONIAL PARA MOSTRAR ULTIMA IMAGEM-->
+        </div>
+
+
+        <div class="swiper-pagination"></div>
+        
+      </div>
+      
+    </div>
+  </section>
+</section>
+    <!-------------------- HOME 
+    
     <section class="section" id="home" style="background-color: #0F241D; padding: 40px 0;">
         <br>
         <br>
         <div class="container" style="display: flex; align-items: center; justify-content: center; margin: 0 auto; flex-wrap: wrap; gap: 100px;">
             
-            <!-- Imagem à esquerda -->
+          
             <div class="image" style="flex: 1; margin-right: 60px;">
                <img src="imagem1.jpg" alt="Meridiano Geotecnologias" style="max-width: 90%; height: auto; border-radius: 10px;">
             </div>
+            
     
-            <!-- Texto à direita -->
+        
             <div class="text" style="flex: 2; color: white; padding-left: 60px;">
                 <h2 class="title" style="color: #f1cc62;">Regularização de Imóveis: Rurais e Urbanos</h2>
                 <p>
@@ -121,134 +190,237 @@
             </div>
         </div>
     </section>
-    <div class="divider-1"></div>
+    <div class="divider-1"></div>-------------------->
 
-    <!------SERVICO 2------->
-<section id="levatamento">
-    <section class="section" id="about" style="background-color: #f1cc62; padding: 40px 0;">
-        <div class="container grid" style="display: flex; align-items: center; gap: 40px;">
-            
-            <!-- Imagem à esquerda -->
-            <div class="image" style="flex: 1; text-align: center;">
-                <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                     alt="Mapeamento com Drone" style="max-width: 100%; height: auto; border-radius: 10px;">
-            </div>
-    
-            <!-- Texto à direita -->
-            <div class="text" style="flex: 1; color: #0F241D; padding-left: 40px;">
-                <h2 class="title" style="color: #0F241D;">Levantamento Topográfico</h2>
-                <p>Realizamos levantamentos topográficos de alta precisão para mapear terrenos rurais e urbanos, fornecendo dados detalhados sobre relevo, dimensões e 
-                    características do solo. Utilizando equipamentos modernos, como Estação Total, GPS RTK e drones, 
-                    garantimos medições confiáveis para projetos de engenharia, construção civil, regularização fundiária e infraestrutura.
-                </p><br>
-    
-                <p>Nossa equipe especializada atua desde a análise inicial até a geração de plantas e modelos digitais, assegurando informações precisas para um planejamento 
-                    eficiente e uma execução segura das obras. Combinamos tecnologia e expertise para transformar dados geoespaciais em soluções estratégicas, 
-                    contribuindo para a valorização e desenvolvimento do território.</p> 
-                  
-      
-                <br>
-                <div class="contatoZAP">
-                    <a class="button" href="https://wa.me/+5598999830456" target="_blank" style="background-color: #0F241D; color: #f1cc62; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
-                        Faça seu orçamento
-                    </a>
+    <div class="divider-2"></div>
+
+  <section id="levantamento">
+    <section class="section" id="home" style="background-color: #f1cc62; padding: 2rem 0;">
+      <section class="section" id="testimonials" style="background-color: #f1cc62;">
+          
+          <div class="container" style="display: flex; align-items: center; justify-content: space-between; max-width: 90%; margin: auto;">
+              
+              <!-- Carrossel (Imagem à Esquerda) -->
+              <div class="testimonials swiper" style="flex: 1; max-width: 50%; padding-left: 1%;">
+                  <div class="swiper-wrapper" style="display: flex; gap: 20px;">
+                      
+                      <div class="testimonial swiper-slide">
+                          <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                      </div>
+  
+                      <div class="testimonial swiper-slide">
+                          <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                      </div>
+  
+                      <div class="testimonial swiper-slide">
+                          <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                      </div>
+                      <div class="testimonial swiper-slide">
+                        <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                    </div>
+                    <div class="testimonial swiper-slide">
+                      <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                  </div>
+                  <div class="testimonial swiper-slide">
+                    <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
                 </div>
+  
+                  </div>
+  
+                  <div class="swiper-pagination"></div>
+              </div>
+  
+              <!-- Texto (à Direita) -->
+              <div class="text" style="flex: 1; padding-left: 5px; color: #0F241D;">
+                  <h2 class="title" style="color: #0F241D;">Levantamento Topográfico</h2>
+                  <p>
+                    Realizamos levantamentos topográficos de alta precisão para mapear terrenos rurais e urbanos, fornecendo dados detalhados sobre relevo, dimensões e características do solo. Utilizando equipamentos modernos, como Estação Total, GPS RTK e drones, garantimos medições confiáveis para projetos de engenharia, construção civil, regularização fundiária e infraestrutura.
+                  </p>
+                  <p>
+                    Nossa equipe especializada atua desde a análise inicial até a geração de plantas e modelos digitais, assegurando informações precisas para um planejamento eficiente e uma execução segura das obras. Combinamos tecnologia e expertise para transformar dados geoespaciais em soluções estratégicas, contribuindo para a valorização e desenvolvimento do território
+                  </p>
+                  <div class="contatoZAP">
+                      <a class="button" target="_blank" href="https://wa.me/+5598999830456" style="background-color: #0F241D; color: #f1cc62; padding: 15px 20px; text-decoration: none; border-radius: 5px;">
+                          Faça seu orçamento
+                      </a>
+                  </div>
+              </div>
+  
+          </div>
+  
+      </section>
+  </section>
+</section>
+  
+    <div class="divider-1"></div>
+    <!------SERVICO 2------->
+  <section id="infra">
+    <section class="section" id="home" style="background-color: #0F241D;padding-bottom: 1rem;" >
+      <section class="section" id="testimonials" style="background-color: #0F241D; margin-right: 20px;padding: 5 10px; padding-top: 2%;padding-bottom: 4rem;">
+        <div class="container" style="display: flex; align-items: center; gap: 40px; padding: 0 60px;">
+        
+          <div class="text" style="flex: 2; color: white; padding-left: 60px;">
+            <h2 class="title" style="color: #f1cc62;">Infraestrutura</h2>
+            <p>
+              Transformamos projetos em realidade com soluções completas para infraestrutura, garantindo segurança, eficiência e durabilidade para obras de todos os portes. Atuamos em drenagem, terraplenagem, pavimentação e projetos rodoviários, utilizando tecnologia avançada e metodologias precisas para otimizar o uso do solo e melhorar a mobilidade urbana e rural.
+            </p>
+            <p>
+              Nossa equipe desenvolve estudos detalhados e executa projetos com alto padrão técnico, assegurando conformidade com as normas vigentes. Da concepção à execução, oferecemos planejamento estratégico, controle de qualidade e acompanhamento técnico, garantindo que cada obra seja entregue com excelência e dentro do prazo.
+            </p>
+            <p>
+              Com a Meridiano sua infraestrutura está em boas mãos. Construímos caminhos para o futuro com inovação, precisão e responsabilidade.
+            </p>
+            <div class="contatoZAP">
+                <a class="button" target="_blank" href="https://wa.me/+5598999830456" style="background-color: #f1cc62; color: #0F241D; padding: 20px 10px; text-decoration: none; border-radius: 5px;">
+                    Faça seu orçamento
+                </a>
             </div>
         </div>
+        
+          <div class="testimonials swiper" style="flex: 1; margin-right: 60px;">
+            <div class="swiper-wrapper" style="display: flex; gap: 30px; box-shadow: 0px 0px 12pxrgba(195, 248, 2, 0.08);">
+    
+              <div class="testimonial swiper-slide"  >
+              <img  style="width: 150%; border-radius: 30px; "src="imgescura.jpg" alt="">
+              </div>
+    
+              <div style="width: 10%; padding-right: 5%;">
+                  
+              </div>
+    
+              <div class="testimonial swiper-slide">
+                <img  style="width: 150%;border-radius: 30px;"src="imgescura.jpg" alt="">
+              </div>
+              <div style="width: 10%;border-radius: 30px; padding-right: 5%;">
+                  
+              </div>
+              
+              
+              <div class="testimonial swiper-slide">
+                <img  style="width: 150%;border-radius: 30px;"src="imgescura.jpg" alt="">
+              </div>
+              <div style="width: 10%;border-radius: 30px; padding-right: 5%;">
+        
+              </div>
+              <div class="testimonial swiper-slide">
+                <img  style="width: 150%;border-radius: 30px;"src="imgescura.jpg" alt="">
+              </div>
+    
+              <div class="testimonial swiper-slide">
+              
+              </div>
+              <div class="testimonial swiper-slide">
+              
+              </div>
+              <!-- COLOCAR DUAS DIV TESTIOMONIAL PARA MOSTRAR ULTIMA IMAGEM-->
+            </div>
+    
+    
+            <div class="swiper-pagination"></div>
+            
+          </div>
+        </div>
+        
+      </section>
+    </section>
+  </section>
+    <div class="divider-2"></div>
+
+  <section id="drones">
+    <section class="section" id="home" style="background-color: #f1cc62; padding: 2rem 0;" >
+      <section class="section" id="testimonials" style="background-color: #f1cc62;padding-bottom: 2%;">
+          
+          <div class="container" style="display: flex; align-items: center; justify-content: space-between; max-width: 90%; margin: auto;">
+              
+              <!-- Carrossel (Imagem à Esquerda) -->
+              <div class="testimonials swiper" style="flex: 1; max-width: 50%; padding-left: 1%;">
+                  <div class="swiper-wrapper" style="display: flex; gap: 20px;">
+                      
+                      <div class="testimonial swiper-slide">
+                          <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                      </div>
+  
+                      <div class="testimonial swiper-slide">
+                          <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                      </div>
+  
+                      <div class="testimonial swiper-slide">
+                          <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                      </div>
+
+                      <div class="testimonial swiper-slide">
+                        <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                    </div>
+
+                    <div class="testimonial swiper-slide">
+                      <img style="width: 100%; border-radius: 30px;" src="imgescura.jpg" alt="">
+                  </div>
+  
+                  </div>
+  
+                  <div class="swiper-pagination"></div>
+              </div>
+  
+              <!-- Texto (à Direita) -->
+              <div class="text" style="flex: 1; padding-left: 5px; color: #0F241D;">
+                  <h2 class="title" style="color: #0F241D;">Mapeamento com Drone/VANT</h2>
+                  <p>
+                    Utilizamos drones e VANTs (Veículos Aéreos Não Tripulados) para capturar imagens aéreas de alta precisão, gerando mapas detalhados e modelos tridimensionais para diversas aplicações. A tecnologia permite levantamentos rápidos, seguros e com excelente custo-benefício, otimizando projetos de engenharia, agrimensura, meio ambiente e infraestrutura.
+                  </p>
+                  <p>
+                    Com equipamentos de última geração e sensores de alta resolução, realizamos ortomosaicos, modelos digitais de terreno, modelos digitais de superfície, imagens, acompanhamento de obras, e monitoramento de áreas com extrema precisão. Nossa equipe especializada transforma os dados coletados em informações estratégicas, contribuindo para um planejamento mais eficiente e uma tomada de decisão mais assertiva.
+                  </p>
+                  <p>
+                    Alta tecnologia, precisão e eficiência para mapeamentos inteligentes. Conte com a Meridiano para soluções inovadoras e resultados confiáveis.
+                  </p>
+                  <div class="contatoZAP">
+                      <a class="button" target="_blank" href="https://wa.me/+5598999830456" style="background-color: #0F241D; color: #f1cc62; padding: 15px 20px; text-decoration: none; border-radius: 5px;">
+                          Faça seu orçamento
+                      </a>
+                  </div>  
+              </div>
+              
+          </div>
+          <div class="container grid" style="color: #0F241D; padding-top: 2%;">
+           
+            <div class="statt">
+              <span class="icon">🏠</span>
+              <h3>1.200.000,00m2</h3>
+              <p>Regularizações imobiliárias</p>
+            </div>
+            <div class="statt">
+              <span class="icon">🛰</span>
+              <h3>3.000.000,00m² </h3>
+              <p>Aerolevantamentos</p>
+            </div>
+            <div class="statt">
+              <span class="icon"> 📁 </span>
+              <h3>670.000,00m² </h3>
+              <p>Alunos e clientes</p>
+            </div>
+        </div>
+      </section>
   </section>
 </section>
 
-    <div class="divider-2"></div>
-<!--------------------
-<section class="section" id="home" style="background-color: #0F241D; padding: 40px 0;">
-    <br>
-    <br>
-    <div class="container" style="display: flex; align-items: center; justify-content: center; margin: 0 auto; flex-wrap: wrap; gap: 100px;">
-        
-        
-        <div class="image" style="flex: 1; margin-right: 60px;">
-            <img src="imagem1.jpg" alt="Meridiano Geotecnologias" style="max-width: 90%; height: 600px; border-radius: 10px;">
-        </div>
-
-        
-        <div class="text" style="flex: 2; color: white; padding-left: 60px;">
-            <h2 class="title" style="color: #f1cc62;">Infraestrutura</h2>
-            <p>
-                Transformamos projetos em realidade com soluções completas para infraestrutura, garantindo segurança, eficiência e durabilidade para obras de todos os portes. 
-                Atuamos em drenagem, terraplenagem, pavimentação e projetos rodoviários, utilizando tecnologia avançada e 
-                metodologias precisas para otimizar o uso do solo e melhorar a mobilidade urbana e rural.
-            </p>
-            <p>
-                Nossa equipe desenvolve estudos detalhados e executa projetos com alto padrão técnico, assegurando conformidade com as normas vigentes. 
-                Da concepção à execução, oferecemos planejamento estratégico, controle de qualidade e acompanhamento técnico, 
-                garantindo que cada obra seja entregue com excelência e dentro do prazo.
-            </p>
-            <p>
-                Com a Meridiano sua infraestrutura está em boas mãos. Construímos caminhos para o futuro com inovação, precisão e responsabilidade.
-            </p>
-            <div class="contatoZAP">
-                <a class="button" href="https://wa.me/+5598999830456" target="_blank" style="background-color: #f1cc62; color: #0F241D; padding: 20px 10px; text-decoration: none; border-radius: 5px;">
-                    Faça seu orçamento
-                </a>
-            </div>
-        </div>
-    </div>
-</section>-------------------->
 
 
-<section id="infra">
-<section class="section" id="home" style="background-color: #0F241D; padding: 40px 0;">
-    <br>
-    <br>
-    <div class="container" style="display: flex; align-items: center; justify-content: center; margin: 0 auto; flex-wrap: wrap; gap: 100px;">
-        
-        
-        <div class="image" style="flex: 1; margin-right: 60px;">
-            <img src="imagem1.jpg" alt="Meridiano Geotecnologias" style="max-width: 90%; height: auto; border-radius: 10px;">
-        </div>
-
-        
-        <div class="text" style="flex: 2; color: white; padding-left: 60px;">
-            <h2 class="title" style="color: #f1cc62;">Infraestrutura</h2>
-            <p>
-                Transformamos projetos em realidade com soluções completas para infraestrutura, garantindo segurança, eficiência e durabilidade para obras de todos os portes. 
-                Atuamos em drenagem, terraplenagem, pavimentação e projetos rodoviários, utilizando tecnologia avançada e 
-                metodologias precisas para otimizar o uso do solo e melhorar a mobilidade urbana e rural.
-            </p>
-            <p>
-                Nossa equipe desenvolve estudos detalhados e executa projetos com alto padrão técnico, assegurando conformidade com as normas vigentes. 
-                Da concepção à execução, oferecemos planejamento estratégico, controle de qualidade e acompanhamento técnico, 
-                garantindo que cada obra seja entregue com excelência e dentro do prazo.
-            </p>
-            <p>
-                Com a Meridiano sua infraestrutura está em boas mãos. Construímos caminhos para o futuro com inovação, precisão e responsabilidade.
-            </p>
-            <div class="contatoZAP">
-                <a class="button" href="#contact" style="background-color: #f1cc62; color: #0F241D; padding: 20px 10px; text-decoration: none; border-radius: 5px;">
-                    Faça seu orçamento
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-</section>
-
-      <div class="divider-1"></div>
-
-      <div class="divider-1"></div>
+    <div class="divider-1"></div>
 
     
+
+  <!---            
 <section id="drones">
       <section class="section" id="about" style="background-color: #f1cc62; padding: 40px 0;">
         <div class="container grid" style="display: flex; align-items: center; gap: 40px;">
             
-            <!-- Imagem à esquerda -->
+            
             <div class="image" style="flex: 1; text-align: center;">
                 <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
                      alt="Mapeamento com Drone" style="max-width: 100%; height: auto; border-radius: 10px;">
             </div>
     
-            <!-- Texto à direita -->
+           
             <div class="text" style="flex: 1; color: #0F241D; padding-left: 40px;">
                 <h2 class="title" style="color: #0F241D;">Mapeamento com Drone/VANT</h2>
                 <p>Utilizamos drones e VANTs (Veículos Aéreos Não Tripulados) para capturar imagens aéreas de alta precisão, gerando mapas detalhados e modelos tridimensionais para diversas aplicações. A tecnologia permite levantamentos rápidos,
@@ -268,6 +440,7 @@
                     <br>
                 </div>
             </div>
+            
             
         </div>
     
@@ -297,31 +470,9 @@
       </div>
     </section>
 </section>
+
+-->
      
-      
-     
-    
-    
-   
-    
-  
-  
-  
-
-    <!-------------------- ABOUT -------------------->
-  
-        
-    </section>
-
-    <div class="divider-2"></div>
-
-    <!-------------------- TESTE VISION SERVICES -------------------->
-    
-    
-
-    <div class="divider-1"></div>
-
-
     <div class="divider-1"></div>
 
     <!-------------------- EQUIPAMENTOS -------------------->
@@ -361,7 +512,7 @@
 
     <!-------------------- TESTIMONIALS -------------------->
 
-    <div class="divider-1"></div>
+
 
      <!-------------------- TEST VISION 
      <section class="section" id="testimonials">
@@ -398,7 +549,7 @@
 </main>
     <!-------------------- CONTACT -------------------->
     <div style="background-image: url('imagem1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-  <section class="section">
+  <section class="section" style="padding-top: 5%;">
     <div class="container grid" style="display: flex; align-items: flex-start;">
       <div class="text" style="color: #fff; flex: 1;">
         <h2 class="title" style="color: #fff; color: #fff; flex: 1; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">Entre em contato com a gente!</h2>
